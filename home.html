@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swarnadhenu Premium Cow Ghee Labels</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #fff8e1, #f3e5ab);
+        }
+        
+        .label-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .label {
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            border: 2px solid #d4af37;
+        }
+        
+        .main-label {
+            background: linear-gradient(145deg, #fff9e6, #faf0d2);
+            position: relative;
+            overflow: hidden;
+            min-height: 500px;
+        }
+        
+        .village-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to bottom, #87ceeb 0%, #98fb98 40%, #90ee90 100%);
+            opacity: 0.3;
+        }
+        
+        .village-elements {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 150px;
+            background: linear-gradient(to right, 
+                transparent 0%, 
+                rgba(34, 139, 34, 0.2) 25%, 
+                rgba(34, 139, 34, 0.3) 50%, 
+                rgba(34, 139, 34, 0.2) 75%, 
+                transparent 100%);
+        }
+        
+        .cow-silhouette {
+            position: absolute;
+            bottom: 50px;
+            right: 80px;
+            width: 60px;
+            height: 40px;
+            background: #8B4513;
+            border-radius: 15px;
+            opacity: 0.6;
+        }
+        
+        .cow-silhouette::before {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 15px;
+            background: #8B4513;
+            border-radius: 50%;
+            top: -8px;
+            left: -5px;
+        }
+        
+        .grass {
+            position: absolute;
+            bottom: 40px;
+            left: 0;
+            right: 0;
+            height: 20px;
+            background: repeating-linear-gradient(
+                90deg,
+                #228B22 0px,
+                #32CD32 2px,
+                #228B22 4px
+            );
+            opacity: 0.4;
+        }
+        
+        .content {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+        }
+        
+        .brand-name {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #d4af37;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            margin: 10px 0;
+            font-family: 'Georgia', serif;
+        }
+        
+        .product-name {
+            font-size: 2em;
+            color: #8B4513;
+            font-weight: bold;
+            margin: 15px 0;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+        }
+        
+        .subtitle {
+            font-size: 1.2em;
+            color: #2F4F2F;
+            margin: 10px 0;
+            font-style: italic;
+        }
+        
+        .cow-center {
+            width: 80px;
+            height: 60px;
+            background: #D2691E;
+            border-radius: 25px;
+            margin: 20px auto;
+            position: relative;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        
+        .cow-center::before {
+            content: '';
+            position: absolute;
+            width: 30px;
+            height: 25px;
+            background: #D2691E;
+            border-radius: 50%;
+            top: -12px;
+            left: -8px;
+        }
+        
+        .cow-center::after {
+            content: '🌱';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 1.5em;
+        }
+        
+        .weight {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #8B0000;
+            background: #FFD700;
+            padding: 10px 20px;
+            border-radius: 25px;
+            display: inline-block;
+            margin: 15px 0;
+        }
+        
+        .details-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 20px 0;
+            text-align: left;
+        }
+        
+        .detail-box {
+            background: rgba(255,255,255,0.8);
+            padding: 15px;
+            border-radius: 10px;
+            border-left: 4px solid #d4af37;
+        }
+        
+        .detail-title {
+            font-weight: bold;
+            color: #8B4513;
+            margin-bottom: 5px;
+        }
+        
+        .ingredients {
+            background: #f0f8e8;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 15px 0;
+        }
+        
+        .nutritional-info {
+            background: #fff8e1;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 15px 0;
+        }
+        
+        .footer-info {
+            background: #2F4F2F;
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 20px;
+            text-align: center;
+        }
+        
+        .fssai-box {
+            background: #FFE4B5;
+            border: 2px solid #d4af37;
+            padding: 10px;
+            border-radius: 8px;
+            margin: 10px 0;
+            text-align: center;
+            font-weight: bold;
+        }
+        
+        .quality-badges {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+        
+        .badge {
+            background: linear-gradient(45deg, #FFD700, #FFA500);
+            color: #8B4513;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+            font-size: 0.9em;
+        }
+        
+        .address-section {
+            background: #f5f5dc;
+            padding: 12px;
+            border-radius: 8px;
+            margin: 15px 0;
+            border: 1px solid #d4af37;
+        }
+        
+        .title {
+            text-align: center;
+            color: #8B4513;
+            font-size: 2em;
+            margin-bottom: 30px;
+            font-weight: bold;
+        }
+        
+        @media (max-width: 768px) {
+            .details-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .brand-name {
+                font-size: 2em;
+            }
+            
+            .product-name {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="label-container">
+        <h1 class="title">🐄 Swarnadhenu Premium Cow Ghee - Product Labels 🌾</h1>
+        
+        <!-- Main Product Label -->
+        <div class="label main-label">
+            <div class="village-bg"></div>
+            <div class="village-elements"></div>
+            <div class="cow-silhouette"></div>
+            <div class="grass"></div>
+            
+            <div class="content">
+                <div class="brand-name">स्वर्णधेनु</div>
+                <div class="brand-name" style="font-size: 1.8em;">SWARNADHENU</div>
+                
+                <div class="product-name">गिर गाय का घी</div>
+                <div class="product-name" style="font-size: 1.5em;">SONA Organic Ghee</div>
+                
+                <div class="subtitle">Pure • Natural • Traditional</div>
+                
+                <div class="cow-center"></div>
+                
+                <div class="weight">1 KG</div>
+                
+                <div class="quality-badges">
+                    <span class="badge">100% Pure</span>
+                    <span class="badge">No Additives</span>
+                    <span class="badge">Traditional Method</span>
+                    <span class="badge">Premium Quality</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Detailed Information Label -->
+        <div class="label">
+            <h2 style="text-align: center; color: #8B4513; margin-bottom: 20px;">Product Information</h2>
+            
+            <div class="details-grid">
+                <div class="detail-box">
+                    <div class="detail-title">Product Name:</div>
+                    Sona Cow Ghee (Clarified Butter)
+                </div>
+                
+                <div class="detail-box">
+                    <div class="detail-title">Net Weight:</div>
+                    1000g (1 KG)
+                </div>
+                
+                <div class="detail-box">
+                    <div class="detail-title">Brand:</div>
+                    Swarnadhenu (स्वर्णधेनु)
+                </div>
+                
+                <div class="detail-box">
+                    <div class="detail-title">Manufactured By:</div>
+                    Jasraj
+                </div>
+            </div>
+            
+            <div class="ingredients">
+                <h3 style="color: #8B4513; margin-top: 0;">Ingredients:</h3>
+                <p><strong>100% Pure Cow Milk Butter</strong> - No artificial colors, flavors, preservatives, or additives</p>
+            </div>
+            
+            <div class="nutritional-info">
+                <h3 style="color: #8B4513; margin-top: 0;">Nutritional Benefits:</h3>
+                <ul>
+                    <li><strong>High-Quality Protein:</strong> Contains all essential amino acids</li>
+                    <li><strong>Rich in Healthy Fats:</strong> Natural saturated fats for energy</li>
+                    <li><strong>Vitamins:</strong> Source of fat-soluble vitamins A, D, E, K</li>
+                    <li><strong>Natural Energy:</strong> Prevents muscle mass breakdown</li>
+                    <li><strong>Digestive Health:</strong> Easy to digest and metabolize</li>
+                </ul>
+            </div>
+            
+            <div class="address-section">
+                <h3 style="color: #8B4513; margin-top: 0;">Manufacturer Details:</h3>
+                <p><strong>Name:</strong> Jasraj</p>
+                <p><strong>Address:</strong> Lonsara Khurd, District Barwani, Madhya Pradesh, India</p>
+            </div>
+            
+            <!-- <div class="fssai-box">
+                <p>⚠️ FSSAI License Number: [TO BE OBTAINED]</p>
+                <p style="font-size: 0.9em; margin-top: 5px;">This product requires FSSAI registration before commercial sale</p>
+            </div> -->
+        </div>
+        
+        <!-- Processing Information Label -->
+        <div class="label">
+            <h2 style="text-align: center; color: #8B4513; margin-bottom: 20px;">Traditional Processing Method</h2>
+            
+            <div style="background: #f8f8f8; padding: 15px; border-radius: 10px;">
+                <h3 style="color: #8B4513;">Natural Method (Traditional Churning):</h3>
+                <ol style="line-height: 1.8;">
+                    <li><strong>Fresh Cow Milk Collection:</strong> From healthy, grass-fed indigenous cows</li>
+                    <li><strong>Curd Formation:</strong> Natural fermentation using traditional starter culture</li>
+                    <li><strong>Hand Churning:</strong> Using wooden churner (Naturals) to separate butter</li>
+                    <li><strong>Slow Heating:</strong> Gentle heating of butter to extract pure ghee</li>
+                    <li><strong>Straining:</strong> Careful filtration to ensure purity</li>
+                    <li><strong>Natural Cooling:</strong> Allowing natural crystallization</li>
+                </ol>
+            </div>
+            
+            <div style="background: #e8f5e8; padding: 15px; border-radius: 10px; margin-top: 15px;">
+                <h3 style="color: #8B4513;">Quality Assurance:</h3>
+                <ul style="line-height: 1.8;">
+                    <li>✓ No chemical processing</li>
+                    <li>✓ No artificial additives or preservatives</li>
+                    <li>✓ Traditional wooden equipment used</li>
+                    <li>✓ Small batch production for freshness</li>
+                    <li>✓ Hygienic processing environment</li>
+                    <li>✓ Regular quality testing</li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Storage and Usage Label -->
+        <div class="label">
+            <h2 style="text-align: center; color: #8B4513; margin-bottom: 20px;">Storage & Usage Instructions</h2>
+            
+            <div class="details-grid">
+                <div class="detail-box">
+                    <div class="detail-title">Storage:</div>
+                    Store in cool, dry place away from direct sunlight. Refrigeration not required.
+                </div>
+                
+                <div class="detail-box">
+                    <div class="detail-title">Shelf Life:</div>
+                    12 months from manufacturing date when stored properly
+                </div>
+                
+                <div class="detail-box">
+                    <div class="detail-title">Usage:</div>
+                    Ideal for cooking, frying, and traditional recipes. Use clean, dry spoon.
+                </div>
+                
+                <div class="detail-box">
+                    <div class="detail-title">Best Before:</div>
+                    [Date to be printed during packaging]
+                </div>
+            </div>
+            
+            <div style="background: #fff3cd; padding: 15px; border-radius: 10px; margin-top: 15px; border-left: 4px solid #ffc107;">
+                <h3 style="color: #8B4513; margin-top: 0;">Important Notes:</h3>
+                <ul>
+                    <li>Natural granulation may occur - this indicates purity</li>
+                    <li>Golden color and rich aroma are signs of quality</li>
+                    <li>Keep jar tightly closed after use</li>
+                    <li>Avoid contamination with water or wet utensils</li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Regulatory Compliance
+        <div class="label">
+            <h2 style="text-align: center; color: #8B4513; margin-bottom: 20px;">Regulatory Compliance</h2>
+            
+            <div style="background: #f8d7da; padding: 15px; border-radius: 10px; border: 1px solid #f5c6cb;">
+                <h3 style="color: #721c24; margin-top: 0;">⚠️ Important Legal Requirements:</h3>
+                <ul>
+                    <li><strong>FSSAI License:</strong> Mandatory before commercial sales</li>
+                    <li><strong>Product Testing:</strong> Required for nutritional and safety parameters</li>
+                    <li><strong>Label Compliance:</strong> Must follow FSSAI labeling regulations</li>
+                    <li><strong>Note on A2 Claims:</strong> FSSAI has restricted A1/A2 claims on dairy products</li>
+                </ul>
+            </div>
+            
+            <div style="background: #d1ecf1; padding: 15px; border-radius: 10px; margin-top: 15px; border: 1px solid #bee5eb;">
+                <h3 style="color: #0c5460; margin-top: 0;">✓ Recommended Alternative Claims:</h3>
+                <ul>
+                    <li>"Premium Cow Ghee" instead of "A2 Ghee"</li>
+                    <li>"Traditional Bilona Method"</li>
+                    <li>"Pure Cow Milk Ghee"</li>
+                    <li>"No Artificial Additives"</li>
+                    <li>"Grass-Fed Cow Milk"</li>
+                </ul>
+            </div>
+        </div> -->
+        
+        <div class="footer-info">
+            <p><strong>🏆 Swarnadhenu - Connecting Tradition with Purity 🏆</strong></p>
+            <p>Made with love in the heart of Madhya Pradesh</p>
+            <p style="font-size: 0.9em; margin-top: 10px;">
+                For queries: Contact Jasraj, Lonsara Khurd, Dist. Barwani (M.P)
+            </p>
+        </div>
+    </div>
+</body>
+</html>

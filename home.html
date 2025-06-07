@@ -3,810 +3,647 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Swarnadhenu Premium Cow Ghee</title>
+    <title>Swarnadhenu Premium Cow Ghee Labels</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap');
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        :root {
-            --primary-gold: #d4af37;
-            --deep-gold: #b8941f;
-            --warm-brown: #8B4513;
-            --dark-green: #2F4F2F;
-            --light-cream: #fff8e1;
-            --pure-white: #ffffff;
-            --soft-shadow: rgba(0, 0, 0, 0.1);
-            --gradient-sunset: linear-gradient(135deg, #ff9a9e 0%, #fecfef 50%, #fecfef 100%);
-            --gradient-gold: linear-gradient(135deg, #d4af37 0%, #ffd700 100%);
-        }
-        
         body {
-            font-family: 'Inter', sans-serif;
-            line-height: 1.6;
-            color: #333;
-            overflow-x: hidden;
-            background: linear-gradient(135deg, #fff8e1 0%, #f3e5ab 100%);
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #fff8e1, #f3e5ab);
+            animation: backgroundShimmer 8s ease-in-out infinite;
         }
         
-        /* Smooth scroll behavior */
-        html {
-            scroll-behavior: smooth;
+        @keyframes backgroundShimmer {
+            0%, 100% { background: linear-gradient(135deg, #fff8e1, #f3e5ab); }
+            50% { background: linear-gradient(135deg, #faf5e4, #f0e2a3); }
         }
         
-        /* Loading animation */
-        .loading-screen {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: var(--gradient-gold);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 9999;
-            transition: opacity 0.5s ease;
-        }
-        
-        .loading-cow {
-            width: 100px;
-            height: 100px;
-            background: var(--warm-brown);
-            border-radius: 50%;
-            position: relative;
-            animation: bounce 1s infinite alternate;
-        }
-        
-        .loading-cow::before {
-            content: '🐄';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-size: 3em;
-            animation: rotate 2s linear infinite;
-        }
-        
-        @keyframes bounce {
-            0% { transform: translateY(0); }
-            100% { transform: translateY(-20px); }
-        }
-        
-        @keyframes rotate {
-            0% { transform: translate(-50%, -50%) rotate(0deg); }
-            100% { transform: translate(-50%, -50%) rotate(360deg); }
-        }
-        
-        /* Navigation */
-        .nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            z-index: 1000;
-            padding: 1rem 0;
-            transition: all 0.3s ease;
-        }
-        
-        .nav.scrolled {
-            background: rgba(255, 255, 255, 0.98);
-            box-shadow: 0 4px 20px var(--soft-shadow);
-        }
-        
-        .nav-container {
+        .label-container {
             max-width: 1200px;
             margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 2rem;
         }
         
-        .logo {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.8rem;
-            font-weight: 900;
-            color: var(--primary-gold);
-            text-decoration: none;
-            transition: transform 0.3s ease;
+        .label {
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            border: 2px solid #d4af37;
         }
         
-        .logo:hover {
-            transform: scale(1.05);
-        }
-        
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-        }
-        
-        .nav-links a {
-            text-decoration: none;
-            color: var(--warm-brown);
-            font-weight: 500;
-            transition: all 0.3s ease;
+        .main-label {
+            background: linear-gradient(145deg, #fff9e6, #faf0d2);
             position: relative;
-        }
-        
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: var(--primary-gold);
-            transition: width 0.3s ease;
-        }
-        
-        .nav-links a:hover::after {
-            width: 100%;
-        }
-        
-        /* Hero Section */
-        .hero {
-            height: 100vh;
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
             overflow: hidden;
-            background: linear-gradient(135deg, #87ceeb 0%, #98fb98 40%, #90ee90 100%);
+            min-height: 500px;
         }
         
-        .hero-bg {
+        .village-bg {
             position: absolute;
             top: 0;
             left: 0;
             right: 0;
             bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 800"><defs><linearGradient id="sky" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" style="stop-color:%2387ceeb;stop-opacity:1" /><stop offset="100%" style="stop-color:%2398fb98;stop-opacity:1" /></linearGradient></defs><rect width="1000" height="800" fill="url(%23sky)"/></svg>') center/cover;
+            background: linear-gradient(to bottom, #87ceeb 0%, #98fb98 40%, #90ee90 100%);
             opacity: 0.3;
         }
         
-        .floating-elements {
+        .village-elements {
             position: absolute;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 150px;
+            background: linear-gradient(to right, 
+                transparent 0%, 
+                rgba(34, 139, 34, 0.2) 25%, 
+                rgba(34, 139, 34, 0.3) 50%, 
+                rgba(34, 139, 34, 0.2) 75%, 
+                transparent 100%);
         }
         
-        .floating-cow {
+        .cow-silhouette {
             position: absolute;
-            font-size: 3rem;
-            opacity: 0.1;
-            animation: float 6s ease-in-out infinite;
+            bottom: 50px;
+            right: 80px;
+            width: 80px;
+            height: 50px;
+            animation: cowGrazing 3s ease-in-out infinite;
         }
         
-        .floating-cow:nth-child(1) {
-            top: 20%;
-            left: 10%;
-            animation-delay: 0s;
-        }
-        
-        .floating-cow:nth-child(2) {
-            top: 60%;
-            right: 15%;
-            animation-delay: 2s;
-        }
-        
-        .floating-cow:nth-child(3) {
-            bottom: 30%;
-            left: 20%;
-            animation-delay: 4s;
-        }
-        
-        @keyframes float {
-            0%, 100% { transform: translateY(0px) rotate(0deg); }
-            50% { transform: translateY(-20px) rotate(5deg); }
-        }
-        
-        .hero-content {
-            text-align: center;
-            z-index: 10;
-            max-width: 800px;
-            padding: 2rem;
-            animation: fadeInUp 1s ease;
-        }
-        
-        @keyframes fadeInUp {
-            0% {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            100% {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        .hero-title {
-            font-family: 'Playfair Display', serif;
-            font-size: clamp(3rem, 8vw, 6rem);
-            font-weight: 900;
-            color: var(--primary-gold);
-            text-shadow: 3px 3px 6px rgba(0,0,0,0.3);
-            margin-bottom: 1rem;
-            position: relative;
-        }
-        
-        .hero-title::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 100px;
-            height: 4px;
-            background: var(--gradient-gold);
-            border-radius: 2px;
-        }
-        
-        .hero-subtitle {
-            font-size: clamp(1.5rem, 4vw, 2.5rem);
-            color: var(--warm-brown);
-            font-weight: 700;
-            margin-bottom: 1rem;
-        }
-        
-        .hero-description {
-            font-size: 1.3rem;
-            color: var(--dark-green);
-            font-style: italic;
-            margin-bottom: 2rem;
-        }
-        
-        .hero-cow {
-            width: 120px;
-            height: 90px;
-            background: var(--warm-brown);
-            border-radius: 30px;
-            margin: 2rem auto;
-            position: relative;
-            animation: pulse 2s ease-in-out infinite;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-        }
-        
-        .hero-cow::before {
-            content: '';
-            position: absolute;
-            width: 40px;
+        .cow-body {
+            width: 60px;
             height: 35px;
-            background: var(--warm-brown);
-            border-radius: 50%;
-            top: -18px;
-            left: -12px;
+            background: linear-gradient(145deg, #8B4513, #654321);
+            border-radius: 20px;
+            position: relative;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.3);
         }
         
-        .hero-cow::after {
-            content: '🌱';
+        .cow-head {
+            position: absolute;
+            width: 25px;
+            height: 20px;
+            background: linear-gradient(145deg, #8B4513, #654321);
+            border-radius: 50%;
+            top: -10px;
+            left: -8px;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+        }
+        
+        .cow-horns {
+            position: absolute;
+            top: -18px;
+            left: -2px;
+            width: 4px;
+            height: 8px;
+            background: #F5DEB3;
+            border-radius: 2px;
+            transform: rotate(-15deg);
+        }
+        
+        .cow-horns::after {
+            content: '';
+            position: absolute;
+            width: 4px;
+            height: 8px;
+            background: #F5DEB3;
+            border-radius: 2px;
+            left: 10px;
+            transform: rotate(30deg);
+        }
+        
+        .cow-spots {
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            background: #FFFFFF;
+            border-radius: 50%;
+            top: 8px;
+            left: 15px;
+            animation: spotTwinkle 3s ease-in-out infinite;
+        }
+        
+        .cow-spots::after {
+            content: '';
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            background: #FFFFFF;
+            border-radius: 50%;
+            top: 10px;
+            left: 20px;
+            animation: spotTwinkle 3s ease-in-out infinite 0.5s;
+        }
+        
+        .cow-spots::before {
+            content: '';
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            background: #FFFFFF;
+            border-radius: 50%;
+            top: -2px;
+            left: 8px;
+            animation: spotTwinkle 3s ease-in-out infinite 1s;
+        }
+        
+        .cow-legs {
+            position: absolute;
+            bottom: -8px;
+            left: 5px;
+            width: 4px;
+            height: 8px;
+            background: #654321;
+            border-radius: 2px;
+            box-shadow: 12px 0 0 #654321, 24px 0 0 #654321, 36px 0 0 #654321;
+            animation: legWalk 4s ease-in-out infinite;
+        }
+        
+        .cow-tail {
+            position: absolute;
+            right: -5px;
+            top: 5px;
+            width: 2px;
+            height: 15px;
+            background: #654321;
+            border-radius: 2px;
+            transform-origin: top;
+            animation: tailWag 2s ease-in-out infinite;
+        }
+        
+        .cow-udder {
+            position: absolute;
+            bottom: -5px;
+            left: 20px;
+            width: 8px;
+            height: 6px;
+            background: #FFB6C1;
+            border-radius: 50%;
+            animation: udderBounce 3s ease-in-out infinite;
+        }
+        
+        @keyframes spotTwinkle {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.7; transform: scale(1.1); }
+        }
+        
+        @keyframes legWalk {
+            0%, 100% { transform: translateY(0px); }
+            25% { transform: translateY(-1px); }
+            75% { transform: translateY(1px); }
+        }
+        
+        @keyframes udderBounce {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-2px); }
+        }
+        
+        @keyframes cowGrazing {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-3px); }
+        }
+        
+        @keyframes tailWag {
+            0%, 100% { transform: rotate(0deg); }
+            25% { transform: rotate(10deg); }
+            75% { transform: rotate(-10deg); }
+        }
+        
+        .grass {
+            position: absolute;
+            bottom: 40px;
+            left: 0;
+            right: 0;
+            height: 20px;
+            background: repeating-linear-gradient(
+                90deg,
+                #228B22 0px,
+                #32CD32 2px,
+                #228B22 4px
+            );
+            opacity: 0.4;
+        }
+        
+        .content {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+        }
+        
+        .brand-name {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #d4af37;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.4);
+            margin: 10px 0;
+            font-family: 'Georgia', serif;
+            animation: goldGlow 3s ease-in-out infinite;
+        }
+        
+        @keyframes goldGlow {
+            0%, 100% { 
+                color: #d4af37; 
+                text-shadow: 3px 3px 6px rgba(0,0,0,0.4), 0 0 20px rgba(212, 175, 55, 0.3);
+            }
+            50% { 
+                color: #FFD700; 
+                text-shadow: 3px 3px 6px rgba(0,0,0,0.4), 0 0 30px rgba(255, 215, 0, 0.5);
+            }
+        }
+        
+        .product-name {
+            font-size: 2em;
+            color: #8B4513;
+            font-weight: bold;
+            margin: 15px 0;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+        }
+        
+        .subtitle {
+            font-size: 1.2em;
+            color: #2F4F2F;
+            margin: 10px 0;
+            font-style: italic;
+        }
+        
+        .cow-center {
+            width: 100px;
+            height: 70px;
+            margin: 20px auto;
+            position: relative;
+            animation: gentleBob 4s ease-in-out infinite;
+        }
+        
+        .main-cow-body {
+            width: 80px;
+            height: 50px;
+            background: linear-gradient(145deg, #8B4513, #654321);
+            border-radius: 25px;
+            position: relative;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+        
+        .main-cow-head {
+            position: absolute;
+            width: 35px;
+            height: 28px;
+            background: linear-gradient(145deg, #8B4513, #654321);
+            border-radius: 50%;
+            top: -14px;
+            left: -12px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+        }
+        
+        .main-cow-horns {
+            position: absolute;
+            top: -25px;
+            left: -5px;
+            width: 6px;
+            height: 12px;
+            background: #F5DEB3;
+            border-radius: 3px;
+            transform: rotate(-15deg);
+            animation: hornSway 4s ease-in-out infinite;
+        }
+        
+        .main-cow-horns::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            height: 12px;
+            background: #F5DEB3;
+            border-radius: 3px;
+            left: 15px;
+            transform: rotate(30deg);
+        }
+        
+        .main-cow-spots {
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            background: #FFFFFF;
+            border-radius: 50%;
+            top: 12px;
+            left: 20px;
+            animation: mainSpotTwinkle 4s ease-in-out infinite;
+        }
+        
+        .main-cow-spots::after {
+            content: '';
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            background: #FFFFFF;
+            border-radius: 50%;
+            top: 12px;
+            left: 25px;
+            animation: mainSpotTwinkle 4s ease-in-out infinite 0.7s;
+        }
+        
+        .main-cow-spots::before {
+            content: '';
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: #FFFFFF;
+            border-radius: 50%;
+            top: -5px;
+            left: 15px;
+            animation: mainSpotTwinkle 4s ease-in-out infinite 1.4s;
+        }
+        
+        .main-cow-legs {
+            position: absolute;
+            bottom: -12px;
+            left: 8px;
+            width: 5px;
+            height: 12px;
+            background: #654321;
+            border-radius: 3px;
+            box-shadow: 15px 0 0 #654321, 30px 0 0 #654321, 45px 0 0 #654321;
+            animation: mainLegWalk 5s ease-in-out infinite;
+        }
+        
+        .main-cow-udder {
+            position: absolute;
+            bottom: -8px;
+            left: 25px;
+            width: 12px;
+            height: 8px;
+            background: #FFB6C1;
+            border-radius: 50%;
+            animation: mainUdderBounce 3s ease-in-out infinite;
+        }
+        
+        .main-cow-tail {
+            position: absolute;
+            right: -8px;
+            top: 8px;
+            width: 3px;
+            height: 20px;
+            background: #654321;
+            border-radius: 3px;
+            transform-origin: top;
+            animation: mainTailSwish 3s ease-in-out infinite;
+        }
+        
+        @keyframes hornSway {
+            0%, 100% { transform: rotate(-15deg); }
+            50% { transform: rotate(-12deg); }
+        }
+        
+        @keyframes mainSpotTwinkle {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.8; transform: scale(1.15); }
+        }
+        
+        @keyframes mainLegWalk {
+            0%, 100% { transform: translateY(0px) translateX(0px); }
+            25% { transform: translateY(-2px) translateX(1px); }
+            75% { transform: translateY(1px) translateX(-1px); }
+        }
+        
+        @keyframes mainUdderBounce {
+            0%, 100% { transform: translateY(0px) scale(1); }
+            50% { transform: translateY(-3px) scale(1.1); }
+        }
+        
+        @keyframes mainTailSwish {
+            0%, 100% { transform: rotate(0deg); }
+            25% { transform: rotate(15deg); }
+            75% { transform: rotate(-15deg); }
+        }
+        
+        .grass-eating {
             position: absolute;
             bottom: -25px;
             left: 50%;
             transform: translateX(-50%);
-            font-size: 2rem;
-            animation: sway 3s ease-in-out infinite;
+            font-size: 2em;
+            animation: grassSway 3s ease-in-out infinite;
         }
         
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.05); }
+        @keyframes gentleBob {
+            0%, 100% { transform: translateY(0px) scale(1); }
+            50% { transform: translateY(-2px) scale(1.02); }
         }
         
-        @keyframes sway {
+        @keyframes grassSway {
             0%, 100% { transform: translateX(-50%) rotate(0deg); }
-            50% { transform: translateX(-50%) rotate(10deg); }
+            33% { transform: translateX(-50%) rotate(3deg); }
+            66% { transform: translateX(-50%) rotate(-3deg); }
         }
         
-        .weight-badge {
+        .weight {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #8B0000;
+            background: #FFD700;
+            padding: 10px 20px;
+            border-radius: 25px;
             display: inline-block;
-            font-size: 2rem;
-            font-weight: 900;
-            color: var(--warm-brown);
-            background: var(--gradient-gold);
-            padding: 1rem 2rem;
-            border-radius: 50px;
-            margin: 1rem 0;
-            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.3);
-            transition: all 0.3s ease;
-            cursor: pointer;
+            margin: 15px 0;
         }
         
-        .weight-badge:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 35px rgba(212, 175, 55, 0.4);
+        .details-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 20px 0;
+            text-align: left;
+        }
+        
+        .detail-box {
+            background: rgba(255,255,255,0.8);
+            padding: 15px;
+            border-radius: 10px;
+            border-left: 4px solid #d4af37;
+        }
+        
+        .detail-title {
+            font-weight: bold;
+            color: #8B4513;
+            margin-bottom: 5px;
+        }
+        
+        .ingredients {
+            background: #f0f8e8;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 15px 0;
+        }
+        
+        .nutritional-info {
+            background: #fff8e1;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 15px 0;
+        }
+        
+        .footer-info {
+            background: #2F4F2F;
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 20px;
+            text-align: center;
+        }
+        
+        .fssai-box {
+            background: #FFE4B5;
+            border: 2px solid #d4af37;
+            padding: 10px;
+            border-radius: 8px;
+            margin: 10px 0;
+            text-align: center;
+            font-weight: bold;
         }
         
         .quality-badges {
             display: flex;
             justify-content: center;
-            gap: 1rem;
-            margin: 2rem 0;
+            gap: 15px;
+            margin: 20px 0;
             flex-wrap: wrap;
         }
         
         .badge {
-            background: var(--gradient-gold);
-            color: var(--warm-brown);
-            padding: 0.8rem 1.5rem;
-            border-radius: 25px;
-            font-weight: 600;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-            transition: all 0.3s ease;
-            cursor: pointer;
-            position: relative;
-            overflow: hidden;
+            background: linear-gradient(45deg, #FFD700, #FFA500);
+            color: #8B4513;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+            font-size: 0.9em;
         }
         
-        .badge::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
-            transition: left 0.5s ease;
+        .address-section {
+            background: #f5f5dc;
+            padding: 12px;
+            border-radius: 8px;
+            margin: 15px 0;
+            border: 1px solid #d4af37;
         }
         
-        .badge:hover::before {
-            left: 100%;
-        }
-        
-        .badge:hover {
-            transform: translateY(-3px) scale(1.05);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-        }
-        
-        /* Sections */
-        .section {
-            padding: 5rem 0;
-            position: relative;
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-        
-        .section-title {
-            font-family: 'Playfair Display', serif;
-            font-size: clamp(2.5rem, 5vw, 4rem);
-            font-weight: 700;
+        .title {
             text-align: center;
-            color: var(--warm-brown);
-            margin-bottom: 3rem;
-            position: relative;
-        }
-        
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: -15px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 4px;
-            background: var(--gradient-gold);
-            border-radius: 2px;
-        }
-        
-        /* Cards */
-        .card {
-            background: rgba(255, 255, 255, 0.9);
-            border-radius: 20px;
-            padding: 2rem;
-            margin: 2rem 0;
-            box-shadow: 0 10px 40px var(--soft-shadow);
-            border: 2px solid var(--primary-gold);
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: var(--gradient-gold);
-        }
-        
-        .card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
-        }
-        
-        .card-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin: 3rem 0;
-        }
-        
-        .detail-box {
-            background: rgba(255,255,255,0.9);
-            padding: 1.5rem;
-            border-radius: 15px;
-            border-left: 5px solid var(--primary-gold);
-            transition: all 0.3s ease;
-            cursor: pointer;
-        }
-        
-        .detail-box:hover {
-            transform: translateX(10px);
-            box-shadow: 0 8px 25px var(--soft-shadow);
-        }
-        
-        .detail-title {
-            font-weight: 700;
-            color: var(--warm-brown);
-            margin-bottom: 0.5rem;
-            font-size: 1.1rem;
-        }
-        
-        /* Ingredients Section */
-        .ingredients {
-            background: linear-gradient(135deg, #f0f8e8, #e8f5e8);
-            padding: 2rem;
-            border-radius: 20px;
-            margin: 2rem 0;
-            border: 2px solid var(--primary-gold);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .ingredients::before {
-            content: '🌿';
-            position: absolute;
-            top: -10px;
-            right: -10px;
-            font-size: 4rem;
-            opacity: 0.1;
-            transform: rotate(15deg);
-        }
-        
-        .ingredients h3 {
-            color: var(--warm-brown);
-            margin-bottom: 1rem;
-            font-size: 1.5rem;
-        }
-        
-        /* Nutritional Info */
-        .nutritional-info {
-            background: linear-gradient(135deg, #fff8e1, #ffeaa7);
-            padding: 2rem;
-            border-radius: 20px;
-            margin: 2rem 0;
-            border: 2px solid var(--primary-gold);
-        }
-        
-        .nutritional-info ul {
-            list-style: none;
-            padding: 0;
-        }
-        
-        .nutritional-info li {
-            padding: 0.8rem 0;
-            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
-            transition: all 0.3s ease;
-            cursor: pointer;
-            position: relative;
-            padding-left: 2rem;
-        }
-        
-        .nutritional-info li::before {
-            content: '✓';
-            position: absolute;
-            left: 0;
-            color: var(--primary-gold);
+            color: #8B4513;
+            font-size: 2em;
+            margin-bottom: 30px;
             font-weight: bold;
         }
         
-        .nutritional-info li:hover {
-            background: rgba(212, 175, 55, 0.1);
-            transform: translateX(10px);
-        }
-        
-        /* Process Steps */
-        .process-steps {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin: 3rem 0;
-        }
-        
-        .process-step {
-            background: rgba(255, 255, 255, 0.9);
-            padding: 2rem;
-            border-radius: 20px;
-            text-align: center;
-            box-shadow: 0 8px 30px var(--soft-shadow);
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .process-step::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 5px;
-            background: var(--gradient-gold);
-        }
-        
-        .process-step:hover {
-            transform: translateY(-10px) scale(1.02);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
-        }
-        
-        .step-number {
-            width: 60px;
-            height: 60px;
-            background: var(--gradient-gold);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 900;
-            font-size: 1.5rem;
-            color: var(--warm-brown);
-            margin: 0 auto 1rem;
-            box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
-        }
-        
-        /* Footer */
-        .footer {
-            background: linear-gradient(135deg, var(--dark-green), #1a3a1a);
-            color: white;
-            padding: 3rem 0;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .footer::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 5px;
-            background: var(--gradient-gold);
-        }
-        
-        .footer-content {
-            position: relative;
-            z-index: 2;
-        }
-        
-        .footer h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            color: var(--primary-gold);
-        }
-        
-        .contact-info {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 2rem;
-            border-radius: 15px;
-            margin: 2rem auto;
-            max-width: 600px;
-            backdrop-filter: blur(10px);
-        }
-        
-        /* Scroll to top button */
-        .scroll-top {
-            position: fixed;
-            bottom: 2rem;
-            right: 2rem;
-            width: 60px;
-            height: 60px;
-            background: var(--gradient-gold);
-            border: none;
-            border-radius: 50%;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            color: var(--warm-brown);
-            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
-            transition: all 0.3s ease;
-            opacity: 0;
-            visibility: hidden;
-            z-index: 1000;
-        }
-        
-        .scroll-top.visible {
-            opacity: 1;
-            visibility: visible;
-        }
-        
-        .scroll-top:hover {
-            transform: translateY(-5px) scale(1.1);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.4);
-        }
-        
-        /* Responsive Design */
         @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
-            
-            .hero-content {
-                padding: 1rem;
-            }
-            
-            .quality-badges {
-                gap: 0.5rem;
-            }
-            
-            .badge {
-                padding: 0.6rem 1rem;
-                font-size: 0.9rem;
-            }
-            
-            .card-grid {
+            .details-grid {
                 grid-template-columns: 1fr;
             }
             
-            .process-steps {
-                grid-template-columns: 1fr;
+            .brand-name {
+                font-size: 2em;
             }
-        }
-        
-        /* Animations */
-        .animate-on-scroll {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s ease;
-        }
-        
-        .animate-on-scroll.animated {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        
-        .rotate-on-hover {
-            transition: transform 0.3s ease;
-        }
-        
-        .rotate-on-hover:hover {
-            transform: rotate(5deg);
-        }
-        
-        /* Particle effects */
-        .particles {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-            z-index: 1;
-        }
-        
-        .particle {
-            position: absolute;
-            width: 4px;
-            height: 4px;
-            background: var(--primary-gold);
-            border-radius: 50%;
-            animation: particle-float 8s infinite linear;
-            opacity: 0.6;
-        }
-        
-        @keyframes particle-float {
-            0% {
-                transform: translateY(100vh) rotate(0deg);
-                opacity: 0;
-            }
-            10% {
-                opacity: 0.6;
-            }
-            90% {
-                opacity: 0.6;
-            }
-            100% {
-                transform: translateY(-100px) rotate(360deg);
-                opacity: 0;
+            
+            .product-name {
+                font-size: 1.5em;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Loading Screen -->
-    <div class="loading-screen" id="loadingScreen">
-        <div class="loading-cow"></div>
-    </div>
-
-    <!-- Navigation -->
-    <nav class="nav" id="navbar">
-        <div class="nav-container">
-            <a href="#home" class="logo">स्वर्णधेनु</a>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#product">Product</a></li>
-                <li><a href="#process">Process</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="hero-bg"></div>
-        <div class="particles" id="particles"></div>
-        <div class="floating-elements">
-            <div class="floating-cow">🐄</div>
-            <div class="floating-cow">🌾</div>
-            <div class="floating-cow">🥛</div>
-        </div>
+    <div class="label-container">
+        <h1 class="title">🐄 Swarnadhenu Premium Cow Ghee - Product Labels 🌾</h1>
         
-        <div class="hero-content">
-            <h1 class="hero-title">स्वर्णधेनु</h1>
-            <h2 class="hero-subtitle">गिर गाय का घी<br>SONA Organic Ghee</h2>
-            <p class="hero-description">Pure • Natural • Traditional</p>
+        <!-- Main Product Label -->
+        <div class="label main-label">
+            <div class="village-bg"></div>
+            <div class="village-elements"></div>
+            <div class="cow-silhouette">
+                <div class="cow-body">
+                    <div class="cow-head">
+                        <div class="cow-horns"></div>
+                    </div>
+                    <div class="cow-spots"></div>
+                    <div class="cow-legs"></div>
+                    <div class="cow-tail"></div>
+                    <div class="cow-udder"></div>
+                </div>
+            </div>
+            <div class="grass"></div>
             
-            <div class="hero-cow rotate-on-hover"></div>
-            
-            <div class="weight-badge">1 KG</div>
-            
-            <div class="quality-badges">
-                <span class="badge">100% Pure</span>
-                <span class="badge">No Additives</span>
-                <span class="badge">Traditional Method</span>
-                <span class="badge">Premium Quality</span>
+            <div class="content">
+                <div class="brand-name">स्वर्णधेनु</div>
+                <div class="brand-name" style="font-size: 1.8em;">SWARNADHENU</div>
+                
+                <div class="product-name">सोना गाय घी</div>
+                <div class="product-name" style="font-size: 1.5em;">SONA COW GHEE</div>
+                
+                <div class="subtitle">Pure • Natural • Traditional</div>
+                
+                <div class="cow-center">
+                    <div class="main-cow-body">
+                        <div class="main-cow-head">
+                            <div class="main-cow-horns"></div>
+                        </div>
+                        <div class="main-cow-spots"></div>
+                        <div class="main-cow-legs"></div>
+                        <div class="main-cow-udder"></div>
+                        <div class="main-cow-tail"></div>
+                    </div>
+                    <div class="grass-eating">🌱</div>
+                </div>
+                
+                <div class="weight">1 KG</div>
+                
+                <div class="quality-badges">
+                    <span class="badge" style="animation: badgePulse 2s ease-in-out infinite;">100% Pure</span>
+                    <span class="badge" style="animation: badgePulse 2s ease-in-out infinite 0.5s;">No Additives</span>
+                    <span class="badge" style="animation: badgePulse 2s ease-in-out infinite 1s;">Traditional Method</span>
+                    <span class="badge" style="animation: badgePulse 2s ease-in-out infinite 1.5s;">Premium Quality</span>
+                </div>
+                
+                <style>
+                @keyframes badgePulse {
+                    0%, 100% { transform: scale(1); box-shadow: 0 3px 6px rgba(0,0,0,0.2); }
+                    50% { transform: scale(1.05); box-shadow: 0 5px 15px rgba(255, 215, 0, 0.4); }
+                }
+                </style>
             </div>
         </div>
-    </section>
-
-    <!-- Product Information -->
-    <section class="section" id="product">
-        <div class="container">
-            <h2 class="section-title animate-on-scroll">Product Information</h2>
+        
+        <!-- Detailed Information Label -->
+        <div class="label">
+            <h2 style="text-align: center; color: #8B4513; margin-bottom: 20px;">Product Information</h2>
             
-            <div class="card-grid">
-                <div class="detail-box animate-on-scroll">
+            <div class="details-grid">
+                <div class="detail-box">
                     <div class="detail-title">Product Name:</div>
                     Sona Cow Ghee (Clarified Butter)
                 </div>
                 
-                <div class="detail-box animate-on-scroll">
+                <div class="detail-box">
                     <div class="detail-title">Net Weight:</div>
                     1000g (1 KG)
                 </div>
                 
-                <div class="detail-box animate-on-scroll">
+                <div class="detail-box">
                     <div class="detail-title">Brand:</div>
                     Swarnadhenu (स्वर्णधेनु)
                 </div>
                 
-                <div class="detail-box animate-on-scroll">
+                <div class="detail-box">
                     <div class="detail-title">Manufactured By:</div>
                     Jasraj
                 </div>
             </div>
             
-            <div class="ingredients animate-on-scroll">
-                <h3>Ingredients:</h3>
+            <div class="ingredients">
+                <h3 style="color: #8B4513; margin-top: 0;">Ingredients:</h3>
                 <p><strong>100% Pure Cow Milk Butter</strong> - No artificial colors, flavors, preservatives, or additives</p>
             </div>
             
-            <div class="nutritional-info animate-on-scroll">
-                <h3>Nutritional Benefits:</h3>
+            <div class="nutritional-info">
+                <h3 style="color: #8B4513; margin-top: 0;">Nutritional Benefits:</h3>
                 <ul>
                     <li><strong>High-Quality Protein:</strong> Contains all essential amino acids</li>
                     <li><strong>Rich in Healthy Fats:</strong> Natural saturated fats for energy</li>
@@ -816,457 +653,189 @@
                 </ul>
             </div>
             
-            <div class="card animate-on-scroll">
-                <h3 style="color: var(--warm-brown); margin-bottom: 1rem;">Manufacturer Details:</h3>
+            <div class="address-section">
+                <h3 style="color: #8B4513; margin-top: 0;">Manufacturer Details:</h3>
                 <p><strong>Name:</strong> Jasraj</p>
                 <p><strong>Address:</strong> Lonsara Khurd, District Barwani, Madhya Pradesh, India</p>
             </div>
-        </div>
-    </section>
-
-    <!-- Processing Method -->
-    <section class="section" id="process" style="background: rgba(255,255,255,0.5);">
-        <div class="container">
-            <h2 class="section-title animate-on-scroll">Traditional Processing Method</h2>
             
-            <div class="card animate-on-scroll">
-                <h3 style="color: var(--warm-brown); margin-bottom: 2rem; text-align: center;">Natural Method (Traditional Churning)</h3>
-                <div class="process-steps">
-                    <div class="process-step">
-                        <div class="step-number">1</div>
-                        <h4>Fresh Cow Milk Collection</h4>
-                        <p>From healthy, grass-fed indigenous cows</p>
+            <div class="fssai-box">
+                <p>⚠️ FSSAI License Number: [TO BE OBTAINED]</p>
+                <p style="font-size: 0.9em; margin-top: 5px;">This product requires FSSAI registration before commercial sale</p>
+            </div>
+        </div>
+        
+        <!-- Enhanced Processing Information Label -->
+        <div class="label" style="background: linear-gradient(135deg, #faf8f3, #f5f0e8);">
+            <h2 style="text-align: center; color: #8B4513; margin-bottom: 20px; display: flex; align-items: center; justify-content: center; gap: 10px;">
+                <span style="font-size: 1.5em;">🏺</span>
+                Traditional Bilona Method
+                <span style="font-size: 1.5em;">🥛</span>
+            </h2>
+            
+            <div style="background: linear-gradient(145deg, #fff, #f8f5f0); padding: 20px; border-radius: 15px; border: 2px solid #d4af37; margin-bottom: 20px;">
+                <h3 style="color: #8B4513; text-align: center; margin-bottom: 20px;">🌟 Our Sacred 6-Step Traditional Process 🌟</h3>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+                    <div style="background: #f0f8e8; padding: 15px; border-radius: 12px; border-left: 5px solid #228B22;">
+                        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px;">
+                            <span style="background: #228B22; color: white; border-radius: 50%; width: 25px; height: 25px; display: flex; align-items: center; justify-content: center; font-weight: bold;">1</span>
+                            <strong style="color: #2F4F2F;">🐄 Fresh Cow Milk Collection</strong>
+                        </div>
+                        <p style="margin: 0; font-size: 0.95em; line-height: 1.5;">Premium milk from healthy, grass-fed indigenous cows, collected during optimal milking hours for maximum nutrition.</p>
                     </div>
-                    <div class="process-step">
-                        <div class="step-number">2</div>
-                        <h4>Curd Formation</h4>
-                        <p>Natural fermentation using traditional starter culture</p>
+                    
+                    <div style="background: #fff8e1; padding: 15px; border-radius: 12px; border-left: 5px solid #FFA500;">
+                        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px;">
+                            <span style="background: #FFA500; color: white; border-radius: 50%; width: 25px; height: 25px; display: flex; align-items: center; justify-content: center; font-weight: bold;">2</span>
+                            <strong style="color: #8B4513;">🥛 Natural Curd Formation</strong>
+                        </div>
+                        <p style="margin: 0; font-size: 0.95em; line-height: 1.5;">Overnight fermentation using traditional starter culture (jamun) for 8-12 hours at optimal temperature.</p>
                     </div>
-                    <div class="process-step">
-                        <div class="step-number">3</div>
-                        <h4>Hand Churning</h4>
-                        <p>Using wooden churner (Naturals) to separate butter</p>
+                    
+                    <div style="background: #f0f0ff; padding: 15px; border-radius: 12px; border-left: 5px solid #4169E1;">
+                        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px;">
+                            <span style="background: #4169E1; color: white; border-radius: 50%; width: 25px; height: 25px; display: flex; align-items: center; justify-content: center; font-weight: bold;">3</span>
+                            <strong style="color: #191970;">🏺 Sacred Bilona Churning</strong>
+                        </div>
+                        <p style="margin: 0; font-size: 0.95em; line-height: 1.5;">Hand-churning with wooden bilona (traditional churner) in clockwise direction for 45-60 minutes to separate pure butter.</p>
                     </div>
-                    <div class="process-step">
-                        <div class="step-number">4</div>
-                        <h4>Slow Heating</h4>
-                        <p>Gentle heating of butter to extract pure ghee</p>
+                    
+                    <div style="background: #ffe4e1; padding: 15px; border-radius: 12px; border-left: 5px solid #DC143C;">
+                        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px;">
+                            <span style="background: #DC143C; color: white; border-radius: 50%; width: 25px; height: 25px; display: flex; align-items: center; justify-content: center; font-weight: bold;">4</span>
+                            <strong style="color: #8B0000;">🔥 Gentle Heating Process</strong>
+                        </div>
+                        <p style="margin: 0; font-size: 0.95em; line-height: 1.5;">Slow heating of butter on low flame using traditional copper/brass vessels, carefully monitoring temperature to preserve nutrients.</p>
                     </div>
-                    <div class="process-step">
-                        <div class="step-number">5</div>
-                        <h4>Straining</h4>
-                        <p>Careful filtration to ensure purity</p>
+                    
+                    <div style="background: #f5f5dc; padding: 15px; border-radius: 12px; border-left: 5px solid #DAA520;">
+                        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px;">
+                            <span style="background: #DAA520; color: white; border-radius: 50%; width: 25px; height: 25px; display: flex; align-items: center; justify-content: center; font-weight: bold;">5</span>
+                            <strong style="color: #B8860B;">🧈 Pure Ghee Extraction</strong>
+                        </div>
+                        <p style="margin: 0; font-size: 0.95em; line-height: 1.5;">Careful separation of golden ghee from milk solids when aromatic fragrance peaks, ensuring maximum purity.</p>
                     </div>
-                    <div class="process-step">
-                        <div class="step-number">6</div>
-                        <h4>Natural Cooling</h4>
-                        <p>Allowing natural crystallization</p>
+                    
+                    <div style="background: #e6f3ff; padding: 15px; border-radius: 12px; border-left: 5px solid #00CED1;">
+                        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px;">
+                            <span style="background: #00CED1; color: white; border-radius: 50%; width: 25px; height: 25px; display: flex; align-items: center; justify-content: center; font-weight: bold;">6</span>
+                            <strong style="color: #008B8B;">🏺 Traditional Cooling</strong>
+                        </div>
+                        <p style="margin: 0; font-size: 0.95em; line-height: 1.5;">Natural cooling and crystallization in clay pots, allowing proper texture development and flavor maturation.</p>
                     </div>
                 </div>
             </div>
             
-            <div class="card animate-on-scroll">
-                <h3 style="color: var(--warm-brown); margin-bottom: 1rem;">Quality Assurance:</h3>
-                <div class="nutritional-info" style="background: rgba(232, 245, 232, 0.5);">
-                    <ul>
-                        <li>No chemical processing</li>
-                        <li>No artificial additives or preservatives</li>
-                        <li>Traditional wooden equipment used</li>
-                        <li>Small batch production for freshness</li>
-                        <li>Hygienic processing environment</li>
-                        <li>Regular quality testing</li>
-                    </ul>
+            <div style="background: linear-gradient(45deg, #FFD700, #FFA500); padding: 20px; border-radius: 15px; text-align: center; color: #8B4513; margin-bottom: 20px;">
+                <h3 style="margin-top: 0; font-size: 1.3em;">⏰ Time Investment: 24-48 Hours Per Batch</h3>
+                <p style="margin-bottom: 0; font-weight: bold;">Quality Cannot Be Rushed - Every Drop Worth The Wait!</p>
+            </div>
+            
+            <div style="background: linear-gradient(135deg, #e8f5e8, #d4f1d4); padding: 20px; border-radius: 15px; border: 2px solid #228B22;">
+                <h3 style="color: #2F4F2F; margin-top: 0; text-align: center;">🏆 Why Our Bilona Method is Superior 🏆</h3>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin-top: 15px;">
+                    <div style="background: rgba(255,255,255,0.7); padding: 12px; border-radius: 8px;">
+                        <strong style="color: #2F4F2F;">🌿 Preserves Natural Nutrients:</strong>
+                        <br><span style="font-size: 0.9em;">Low-temperature processing retains vitamins A, D, E, K and beneficial fatty acids.</span>
+                    </div>
+                    
+                    <div style="background: rgba(255,255,255,0.7); padding: 12px; border-radius: 8px;">
+                        <strong style="color: #2F4F2F;">💪 Enhanced Digestibility:</strong>
+                        <br><span style="font-size: 0.9em;">Fermentation process breaks down complex proteins, making it easier to digest.</span>
+                    </div>
+                    
+                    <div style="background: rgba(255,255,255,0.7); padding: 12px; border-radius: 8px;">
+                        <strong style="color: #2F4F2F;">🔥 Higher Smoke Point:</strong>
+                        <br><span style="font-size: 0.9em;">Perfect for Indian cooking methods - deep frying, tempering, and high-heat cooking.</span>
+                    </div>
+                    
+                    <div style="background: rgba(255,255,255,0.7); padding: 12px; border-radius: 8px;">
+                        <strong style="color: #2F4F2F;">🏺 Authentic Flavor:</strong>
+                        <br><span style="font-size: 0.9em;">Rich, nutty aroma and taste that machine-made ghee cannot replicate.</span>
+                    </div>
+                    
+                    <div style="background: rgba(255,255,255,0.7); padding: 12px; border-radius: 8px;">
+                        <strong style="color: #2F4F2F;">📿 Spiritual Significance:</strong>
+                        <br><span style="font-size: 0.9em;">Prepared following ancient Vedic traditions, perfect for religious ceremonies.</span>
+                    </div>
+                    
+                    <div style="background: rgba(255,255,255,0.7); padding: 12px; border-radius: 8px;">
+                        <strong style="color: #2F4F2F;">🌍 Eco-Friendly Process:</strong>
+                        <br><span style="font-size: 0.9em;">Zero machine dependency, minimal carbon footprint, supporting sustainable agriculture.</span>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Storage & Usage -->
-    <section class="section">
-        <div class="container">
-            <h2 class="section-title animate-on-scroll">Storage & Usage Instructions</h2>
             
-            <div class="card-grid">
-                <div class="detail-box animate-on-scroll">
+            <div style="background: #8B4513; color: #FFD700; padding: 15px; border-radius: 12px; text-align: center; margin-top: 20px;">
+                <h3 style="margin: 0; font-size: 1.2em;">🔮 From Our Village to Your Kitchen - Pure Tradition 🔮</h3>
+                <p style="margin: 10px 0 0 0; font-style: italic;">"Every jar carries the blessings of our sacred cows and ancient wisdom"</p>
+            </div>
+        </div>
+        
+        <!-- Storage and Usage Label -->
+        <div class="label">
+            <h2 style="text-align: center; color: #8B4513; margin-bottom: 20px;">Storage & Usage Instructions</h2>
+            
+            <div class="details-grid">
+                <div class="detail-box">
                     <div class="detail-title">Storage:</div>
                     Store in cool, dry place away from direct sunlight. Refrigeration not required.
                 </div>
                 
-                <div class="detail-box animate-on-scroll">
+                <div class="detail-box">
                     <div class="detail-title">Shelf Life:</div>
                     12 months from manufacturing date when stored properly
                 </div>
                 
-                <div class="detail-box animate-on-scroll">
+                <div class="detail-box">
                     <div class="detail-title">Usage:</div>
                     Ideal for cooking, frying, and traditional recipes. Use clean, dry spoon.
                 </div>
                 
-                <div class="detail-box animate-on-scroll">
+                <div class="detail-box">
                     <div class="detail-title">Best Before:</div>
                     [Date to be printed during packaging]
                 </div>
             </div>
             
-            <div class="card animate-on-scroll">
-                <h3 style="color: var(--warm-brown); margin-top: 0;">Important Notes:</h3>
-                <div class="nutritional-info" style="background: rgba(255, 243, 205, 0.5);">
-                    <ul>
-                        <li>Natural granulation may occur - this indicates purity</li>
-                        <li>Golden color and rich aroma are signs of quality</li>
-                        <li>Keep jar tightly closed after use</li>
-                        <li>Avoid contamination with water or wet utensils</li>
-                    </ul>
-                </div>
+            <div style="background: #fff3cd; padding: 15px; border-radius: 10px; margin-top: 15px; border-left: 4px solid #ffc107;">
+                <h3 style="color: #8B4513; margin-top: 0;">Important Notes:</h3>
+                <ul>
+                    <li>Natural granulation may occur - this indicates purity</li>
+                    <li>Golden color and rich aroma are signs of quality</li>
+                    <li>Keep jar tightly closed after use</li>
+                    <li>Avoid contamination with water or wet utensils</li>
+                </ul>
             </div>
         </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer" id="contact">
-        <div class="container">
-            <div class="footer-content animate-on-scroll">
-                <h2>🏆 Swarnadhenu - Connecting Tradition with Purity 🏆</h2>
-                <p style="font-size: 1.2rem; margin: 1rem 0;">Made with love in the heart of Madhya Pradesh</p>
-                
-                <div class="contact-info">
-                    <p><strong>For queries:</strong></p>
-                    <p>Contact Jasraj (+91-9981323225)</p>
-                    <p>Address - Lonsara Khurd, Dist. Barwani (M.P)</p>
-                </div>
+        
+        <!-- Regulatory Compliance -->
+        <div class="label">
+            <h2 style="text-align: center; color: #8B4513; margin-bottom: 20px;">Regulatory Compliance</h2>
+        
+            
+            <div style="background: #d1ecf1; padding: 15px; border-radius: 10px; margin-top: 15px; border: 1px solid #bee5eb;">
+                <h3 style="color: #0c5460; margin-top: 0;">✓ Recommended Alternative Claims:</h3>
+                <ul>
+                    <li>"Premium Cow Ghee" instead of "A2 Ghee"</li>
+                    <li>"Traditional Bilona Method"</li>
+                    <li>"Pure Cow Milk Ghee"</li>
+                    <li>"No Artificial Additives"</li>
+                    <li>"Grass-Fed Cow Milk"</li>
+                </ul>
             </div>
         </div>
-    </footer>
-
-    <!-- Scroll to Top Button -->
-    <button class="scroll-top" id="scrollTop">↑</button>
-
-    <script>
-        // Loading screen
-        window.addEventListener('load', function() {
-            const loadingScreen = document.getElementById('loadingScreen');
-            setTimeout(() => {
-                loadingScreen.style.opacity = '0';
-                setTimeout(() => {
-                    loadingScreen.style.display = 'none';
-                }, 500);
-            }, 2000);
-        });
-
-        // Navbar scroll effect
-        window.addEventListener('scroll', function() {
-            const navbar = document.getElementById('navbar');
-            const scrollTop = document.getElementById('scrollTop');
-            
-            if (window.scrollY > 100) {
-                navbar.classList.add('scrolled');
-                scrollTop.classList.add('visible');
-            } else {
-                navbar.classList.remove('scrolled');
-                scrollTop.classList.remove('visible');
-            }
-        });
-
-        // Scroll to top functionality
-        document.getElementById('scrollTop').addEventListener('click', function() {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
-
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-
-        // Intersection Observer for animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver(function(entries) {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('animated');
-                }
-            });
-        }, observerOptions);
-
-        // Observe all elements with animate-on-scroll class
-        document.querySelectorAll('.animate-on-scroll').forEach(el => {
-            observer.observe(el);
-        });
-
-        // Particle system
-        function createParticle() {
-            const particle = document.createElement('div');
-            particle.className = 'particle';
-            particle.style.left = Math.random() * 100 + '%';
-            particle.style.animationDuration = (Math.random() * 3 + 5) + 's';
-            particle.style.animationDelay = Math.random() * 2 + 's';
-            
-            const particles = document.getElementById('particles');
-            if (particles) {
-                particles.appendChild(particle);
-                
-                // Remove particle after animation
-                setTimeout(() => {
-                    if (particle.parentNode) {
-                        particle.parentNode.removeChild(particle);
-                    }
-                }, 8000);
-            }
-        }
-
-        // Create particles periodically
-        setInterval(createParticle, 500);
-
-        // Interactive hover effects for cards
-        document.querySelectorAll('.card, .detail-box, .process-step').forEach(card => {
-            card.addEventListener('mouseenter', function() {
-                this.style.transform = 'translateY(-10px) scale(1.02)';
-            });
-            
-            card.addEventListener('mouseleave', function() {
-                this.style.transform = 'translateY(0) scale(1)';
-            });
-        });
-
-        // Badge click effects
-        document.querySelectorAll('.badge').forEach(badge => {
-            badge.addEventListener('click', function() {
-                this.style.transform = 'scale(0.95)';
-                setTimeout(() => {
-                    this.style.transform = 'translateY(-3px) scale(1.05)';
-                }, 150);
-            });
-        });
-
-        // Weight badge special effect
-        document.querySelector('.weight-badge').addEventListener('click', function() {
-            this.style.animation = 'pulse 0.6s ease-in-out';
-            setTimeout(() => {
-                this.style.animation = '';
-            }, 600);
-        });
-
-        // Cow animation on click
-        document.querySelector('.hero-cow').addEventListener('click', function() {
-            this.style.animation = 'bounce 1s ease-in-out';
-            setTimeout(() => {
-                this.style.animation = 'pulse 2s ease-in-out infinite';
-            }, 1000);
-        });
-
-        // Add sparkle effect to quality badges
-        function addSparkleEffect(element) {
-            const sparkle = document.createElement('div');
-            sparkle.innerHTML = '✨';
-            sparkle.style.position = 'absolute';
-            sparkle.style.top = '-10px';
-            sparkle.style.right = '-10px';
-            sparkle.style.fontSize = '1.5rem';
-            sparkle.style.animation = 'sparkle 1s ease-out forwards';
-            sparkle.style.pointerEvents = 'none';
-            
-            element.style.position = 'relative';
-            element.appendChild(sparkle);
-            
-            setTimeout(() => {
-                if (sparkle.parentNode) {
-                    sparkle.parentNode.removeChild(sparkle);
-                }
-            }, 1000);
-        }
-
-        // Add sparkle keyframes
-        const sparkleKeyframes = `
-            @keyframes sparkle {
-                0% {
-                    transform: scale(0) rotate(0deg);
-                    opacity: 1;
-                }
-                50% {
-                    transform: scale(1) rotate(180deg);
-                    opacity: 1;
-                }
-                100% {
-                    transform: scale(0) rotate(360deg);
-                    opacity: 0;
-                }
-            }
-        `;
         
-        const styleSheet = document.createElement('style');
-        styleSheet.textContent = sparkleKeyframes;
-        document.head.appendChild(styleSheet);
-
-        // Add sparkle effect to badges on hover
-        document.querySelectorAll('.badge').forEach(badge => {
-            badge.addEventListener('mouseenter', function() {
-                addSparkleEffect(this);
-            });
-        });
-
-        // Parallax effect for hero section
-        window.addEventListener('scroll', function() {
-            const scrolled = window.pageYOffset;
-            const heroContent = document.querySelector('.hero-content');
-            const heroBackground = document.querySelector('.hero-bg');
-            
-            if (heroContent && heroBackground) {
-                heroContent.style.transform = `translateY(${scrolled * 0.5}px)`;
-                heroBackground.style.transform = `translateY(${scrolled * 0.3}px)`;
-            }
-        });
-
-        // Add typing effect to hero title
-        function typeWriter(element, text, speed = 100) {
-            let i = 0;
-            element.innerHTML = '';
-            
-            function type() {
-                if (i < text.length) {
-                    element.innerHTML += text.charAt(i);
-                    i++;
-                    setTimeout(type, speed);
-                }
-            }
-            
-            type();
-        }
-
-        // Initialize typing effect after loading
-        setTimeout(() => {
-            const heroTitle = document.querySelector('.hero-title');
-            if (heroTitle) {
-                const originalText = heroTitle.textContent;
-                typeWriter(heroTitle, originalText, 150);
-            }
-        }, 2500);
-
-        // Add floating animation to floating elements
-        document.querySelectorAll('.floating-cow').forEach((cow, index) => {
-            cow.style.animationDelay = (index * 2) + 's';
-            cow.addEventListener('click', function() {
-                this.style.transform = 'scale(1.5) rotate(360deg)';
-                setTimeout(() => {
-                    this.style.transform = '';
-                }, 500);
-            });
-        });
-
-        // Progressive loading of images and content
-        const progressiveLoad = () => {
-            const elements = document.querySelectorAll('.card, .detail-box');
-            elements.forEach((element, index) => {
-                setTimeout(() => {
-                    element.style.opacity = '1';
-                    element.style.transform = 'translateY(0)';
-                }, index * 100);
-            });
-        };
-
-        // Initialize progressive loading
-        setTimeout(progressiveLoad, 3000);
-
-        // Add interactive sound effects (visual feedback)
-        function addRippleEffect(element, event) {
-            const ripple = document.createElement('div');
-            const rect = element.getBoundingClientRect();
-            const size = Math.max(rect.width, rect.height);
-            const x = event.clientX - rect.left - size / 2;
-            const y = event.clientY - rect.top - size / 2;
-            
-            ripple.style.width = ripple.style.height = size + 'px';
-            ripple.style.left = x + 'px';
-            ripple.style.top = y + 'px';
-            ripple.className = 'ripple-effect';
-            
-            element.appendChild(ripple);
-            
-            setTimeout(() => {
-                if (ripple.parentNode) {
-                    ripple.parentNode.removeChild(ripple);
-                }
-            }, 600);
-        }
-
-        // Add ripple effect styles
-        const rippleStyles = `
-            .ripple-effect {
-                position: absolute;
-                border-radius: 50%;
-                background: rgba(212, 175, 55, 0.3);
-                transform: scale(0);
-                animation: ripple 0.6s linear;
-                pointer-events: none;
-            }
-            
-            @keyframes ripple {
-                to {
-                    transform: scale(2);
-                    opacity: 0;
-                }
-            }
-        `;
-        
-        const rippleStyleSheet = document.createElement('style');
-        rippleStyleSheet.textContent = rippleStyles;
-        document.head.appendChild(rippleStyleSheet);
-
-        // Add ripple effect to clickable elements
-        document.querySelectorAll('.badge, .weight-badge, .process-step').forEach(element => {
-            element.style.position = 'relative';
-            element.style.overflow = 'hidden';
-            
-            element.addEventListener('click', function(e) {
-                addRippleEffect(this, e);
-            });
-        });
-
-        // Add scroll-triggered counter animation for nutritional benefits
-        function animateCounter(element, target, duration = 2000) {
-            let start = 0;
-            const increment = target / (duration / 16);
-            
-            function updateCounter() {
-                start += increment;
-                if (start < target) {
-                    element.textContent = Math.floor(start);
-                    requestAnimationFrame(updateCounter);
-                } else {
-                    element.textContent = target;
-                }
-            }
-            
-            updateCounter();
-        }
-
-        // Enhanced mobile responsiveness
-        function handleMobileOptimization() {
-            const isMobile = window.innerWidth <= 768;
-            const particles = document.getElementById('particles');
-            
-            if (isMobile && particles) {
-                // Reduce particles on mobile for better performance
-                particles.style.display = 'none';
-            } else if (particles) {
-                particles.style.display = 'block';
-            }
-        }
-
-        window.addEventListener('resize', handleMobileOptimization);
-        handleMobileOptimization();
-    </script>
+        <div class="footer-info">
+            <p><strong>🏆 Swarnadhenu - Connecting Tradition with Purity 🏆</strong></p>
+            <p>Made with love in the heart of Madhya Pradesh</p>
+            <p style="font-size: 0.9em; margin-top: 10px;">
+                For queries: Contact Jasraj (+91-9981323225)
+                Address - Lonsara Khurd, Dist. Barwani (M.P), India
+            </p>
+        </div>
+    </div>
+</body>
+</html>

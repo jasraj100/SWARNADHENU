@@ -178,15 +178,7 @@
             box-shadow: 0 15px 40px rgba(217, 119, 6, 0.5);
         }
         
-        /* Floating Cows */
-        .floating-cow {
-            position: absolute;
-            width: 120px;
-            height: 80px;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 60"><ellipse cx="20" cy="45" rx="15" ry="8" fill="%23d4a574"/><ellipse cx="70" cy="45" rx="20" ry="12" fill="%23d4a574"/><circle cx="15" cy="35" r="8" fill="%23d4a574"/><circle cx="25" cy="30" r="3" fill="%23000"/><circle cx="18" cy="32" r="2" fill="%23000"/><path d="M10 25 Q8 20 12 18 Q16 20 14 25" fill="%23d4a574"/><path d="M30 25 Q28 20 32 18 Q36 20 34 25" fill="%23d4a574"/><rect x="18" y="45" width="2" height="8" fill="%23d4a574"/><rect x="22" y="45" width="2" height="8" fill="%23d4a574"/><rect x="65" y="45" width="2" height="8" fill="%23d4a574"/><rect x="69" y="45" width="2" height="8" fill="%23d4a574"/></svg>') no-repeat center;
-            background-size: contain;
-            animation: float 6s ease-in-out infinite;
-        }
+
         
         @keyframes float {
             0%, 100% { transform: translateY(0px) rotate(0deg); }
@@ -377,8 +369,7 @@
             }
             
             .floating-cow {
-                width: 80px;
-                height: 60px;
+                display: none;
             }
             
             .product-grid {
@@ -424,9 +415,7 @@
             <button class="cta-button hover-3d">Discover Pure Tradition</button>
         </div>
         
-        <div class="floating-cow"></div>
-        <div class="floating-cow"></div>
-        <div class="floating-cow"></div>
+
     </section>
     
     <section class="product-section glass-effect fade-in" id="product">
@@ -555,21 +544,6 @@
         
         document.querySelectorAll('.fade-in').forEach(el => {
             observer.observe(el);
-        });
-        
-        // Add mouse movement effect to floating cows
-        document.addEventListener('mousemove', (e) => {
-            const cows = document.querySelectorAll('.floating-cow');
-            const mouseX = e.clientX / window.innerWidth;
-            const mouseY = e.clientY / window.innerHeight;
-            
-            cows.forEach((cow, index) => {
-                const speed = (index + 1) * 0.5;
-                const x = (mouseX - 0.5) * speed;
-                const y = (mouseY - 0.5) * speed;
-                
-                cow.style.transform += ` translate(${x}px, ${y}px)`;
-            });
         });
         
         // Add click effect to CTA button
